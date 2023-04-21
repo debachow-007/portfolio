@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
+  background-color: skyblue;
 }
 
 body {
@@ -18,7 +19,8 @@ a {
 }
 
 header {
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
   padding: 20px 5px;
   position: sticky;
   top: 0;
@@ -27,6 +29,8 @@ header {
 
 #home {
   padding: 5px 5px;
+  background-color: #000;
+  text-align: center;
 }
 
 pre {
