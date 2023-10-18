@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="flex fixed-header">
+        <nav>
+          <ul class="flex fixed-header">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="./html/education.html">Education</a></li>
+            <li><a href="./html/project.html">Projects</a></li>
+            <li><a href="./html/hobbies.html">Hobbies</a></li>
+            <li><a href="./html/contact.html" target="_blank">Contact Me</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main flex">
+        <div class="main-one">
+          <h1>Hi! I am Debargha Chowdhury</h1>
+          <span class="auto"></span>
+          <p>
+            Aspiring software engineer, equipped with coding skills and a passion 
+            for problem-solving, seeking opportunities to make a meaningful impact 
+            and grow in a collaborative tech environment.
+          </p>
+          <a href=""><button>Download my CV <i class="fa-solid fa-download"></i></button></a>
+        </div>
+        <div class="main-two">
+          <img src="./images/profile.jpg" alt="" />
+        </div>
+
+        </br></br></br>
+      </div>
+
+      <section class="about flex" id="about">
+        <div class="about-one">
+          <h1>About me</h1>
+          <span>Debargha Chowdhury</span>
+          <p>
+            Welcome to my portfolio website! I'm thrilled to have you here and share my journey 
+            as a final year Computer Science Engineering student. With a passion for technology 
+            and innovation, I've dedicated myself to honing my coding and problem-solving skills, 
+            and I'm excited to showcase my work and projects.
+
+          </br><br>
+
+            My journey has not only been about technical prowess but also about personal growth. 
+            I bring to the table a strong sense of determination, adaptability, and a keen eye for detail. 
+            These qualities have allowed me to navigate complex projects, overcome challenges, and 
+            consistently deliver exceptional results. Furthermore, my collaboration skills enable me 
+            to work seamlessly in teams and ensure the effective conveyance of ideas and solutions.
+
+          </br><br>
+
+            In the realm of technology, my skill set is robust and constantly evolving. Proficient in 
+            a variety of programming languages such as Python, Java, C, and C++, I have a deep understanding 
+            of software development, data structures, machine learning, and computer networks. My expertise 
+            extends to assembly level programming, web development, and mobile application development, 
+            making me a versatile contributor to a wide range of tech-related projects.
+
+          </br><br>
+
+            As an introvert, I excel in introspection, which allows me to delve deeply into complex technical 
+            challenges and meticulously analyze potential solutions. This inclination towards solitude also 
+            provides me with a natural proclivity for focus and a keen attention to detail. It's a 
+            quality that not only complements my technical skills but also underscores my dedication to 
+            delivering precise and well-thought-out results. In a world that often values extroverted 
+            qualities, I've found that my introverted nature to be an asset, enabling me to bring a different 
+            dimension to my work and problem-solving processes.
+
+          </br><br>
+
+            By exploring the projects showcased on this website, you'll gain firsthand insight into 
+            the depth of my technical skills and how they have been applied to solve real-world challenges. 
+            As you explore these pages, you'll find a collection of my best coding projects, a glimpse 
+            into my problem-solving process, and a little insight into the person behind the code. 
+            I invite you to explore, be inspired, and get in touch for any inquiry or collaboration. 
+            Your visit is appreciated, and I trust you'll find your time here both engaging and enlightening.
+
+          </p>
+          <div class="btns">
+            <a href="/html/contact.html">
+              <button>Contact Me</button>
+            </a>
+          </div>
+        </div>
+        <div class="about-two">
+          <!--Add image-->
+        </div>
+      </section>
+
+      <br><br><br>
+      
+      <footer class="flex" id="footer">
+        <div class="copy">Debargha Chowdhury</div>
+        <div class="social">
+          <a href="https://www.instagram.com/debachow_007/" title="Instagram" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=%2B916393758284&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/debachow/" title="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/debachow-007" title="GitHub" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:debachow007@hotmail.com" title="Mail" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto", {
+        strings: ["Network Engineer", "C Programmer", "Java Programmer", "Machine Learning", "Web Developer",
+                 "Android App Development", "Cybersecurity Enthusiast", "Assembly Level Programming"],
+        typeSpeed: 60,
+        backSpeed: 30,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

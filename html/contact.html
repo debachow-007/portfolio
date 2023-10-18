@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+        <header class="flex fixed-header">
+            <nav>
+                <ul class="flex fixed-header">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contact" id="contact">
+            <h1>Let Us <span>Connect!</span></h1>
+            <p>Use this form to send me a message or <br> connect me on my social media using the buttons below</p>
+            <div class="box flex">
+              <div>
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="name" placeholder="Name..." />
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email..." />
+              </div>
+              <textarea
+                id="message"
+                name=""
+                id=""
+                cols="60"
+                rows="5"
+                placeholder="Enter your Message here..."
+              ></textarea>
+              <div>
+                <button type="button" id="submitBtn">Send</button>
+              </div>
+              <div id="confirmationMessage"></div>
+            </div>
+        </section>
+
+        <footer class="flex" id="footer">
+            <div class="copy">Debargha Chowdhury</div>
+            <div class="social">
+              <a href="https://www.instagram.com/debachow_007/" title="Instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B916393758284&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/debachow/" title="LinkedIn" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/debachow-007" title="GitHub" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:debachow007@hotmail.com" title="Mail" target="_blank">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("qAMJTLIyZmvOp2Fz3");
+    </script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            // Get form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+    
+            // Send the email using Email.js
+            emailjs.send("service_ijuf0sd", "template_lcfh5aj", {
+                from_name: name+" with "+email,
+                message: message,
+            }).then(function (response) {
+                if (response.status === 200) {
+                    // Email sent successfully
+                    document.getElementById("confirmationMessage").textContent = "Thank you for the response! I'll get back to you ASAP";
+                } else {
+                    // Handle errors
+                }
+            }, function (error) {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+  </body>

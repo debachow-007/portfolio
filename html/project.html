@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+        <header class="flex fixed-header">
+            <nav>
+                <ul class="flex fixed-header">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html" target="_blank">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="projects" id="project">
+            <h1>My Awesome <br /><span>Projects</span></h1>
+            <p>
+                Within this portfolio, you'll find a diverse array of projects that 
+                exemplify my technical proficiency, problem-solving acumen, and creativity, 
+                reflecting my dedication to crafting solutions that make a tangible difference.
+            </p>
+            <a href="https://github.com/debachow-007" target="_blank">
+                <button class="button">View All Projects on my GitHub</button>
+            </a>
+            <div class="projects-row">
+            <div class="projects-div">
+                <img src="" alt="" />
+                <h3>Customer Churn Prediction</h3>
+                <h2>Machine Learning</h2>               
+                <p>
+                This project uses Python with libraries like Pandas, NumPy, Matplotlib, 
+                and scikit-learn to analyze and predict customer churn. It begins by loading 
+                a dataset and performing exploratory data analysis through various 
+                visualizations. Data encoding and splitting are carried out, and two 
+                machine learning models, Logistic Regression and Random Forest, are 
+                trained and evaluated for customer churn prediction. The project's 
+                primary goal is to understand and predict customer churn patterns.
+                </p>
+                <a href="https://github.com/debachow-007/CustomerChurnPrediction" target="_blank">
+                    <button>Take a Peek</button>
+                </a>
+            </div>
+            <div class="projects-div">
+                <img src="" alt="" />
+                <h3>Credit Card Fraud Detection</h3>
+                <h2>Machine Learning</h2>
+                <p>
+                    This project is for fraud detection in financial transactions. 
+                    It involves data preprocessing, exploratory data analysis, and 
+                    model training. Several machine learning models, including 
+                    logistic regression, decision trees, random forests, and 
+                    K-nearest neighbors, are trained and evaluated. The project 
+                    aims to identify fraudulent transactions and reports model 
+                    performance metrics such as accuracy, classification reports, 
+                    and confusion matrices.
+                </p>
+                <a href="https://github.com/debachow-007/CreditCardFraud" target="_blank">
+                    <button>Take a Peek</button>
+                </a>
+            </div>
+            <div class="projects-div">
+                <img src="" alt="" />
+                <h3>Movie Genre Prediction</h3>
+                <h2>Machine Learning</h2>
+                <p>
+                    This is a text classification project focused on predicting movie genres 
+                    based on movie titles and descriptions. It involves data preprocessing, 
+                    encoding, and TF-IDF vectorization of text data. Several machine learning 
+                    models, including Gaussian Naive Bayes, Multinomial Naive Bayes, Logistic 
+                    Regression, K-Nearest Neighbors, Support Vector Machine, and Random Forest, 
+                    are trained and evaluated for genre prediction. The models' performance 
+                    is assessed with accuracy scores, classification reports, and confusion 
+                    matrices. The project aims to automate genre tagging for movies, and the 
+                    trained models can be saved for future use.
+                </p>
+                <a href="https://github.com/debachow-007/MovieGenreClassification">
+                    <button>Take a Peek</button>
+                </a>
+            </div>
+            <div class="projects-div">
+                <h3>Packet Flow Visualizer</h3>
+                <h2>Computer Network</h2>
+                <p>
+                    Project Completed as part of Cisco Virtual Internship using Cisco Packet Tracer
+                    The objectives of the project could be divided in two parts:
+                    <br>i. Creating a network topology to suit the needs of a college network
+                    <br>ii. To collect packets at each device using a packet sniffer
+                    <br><br>Details about the project:
+                    <br>The entire network is divided into 4 parts: CS Lab, Library, Board room and Director's office.
+                    <br>The IP addresses are a part of a Subnet with network id 192.168.10.0/26.
+                    <br>The devices are connected within their LANs with a Switch.
+                    <br>The LANs are connected with Routers using RIPv2 protocol.
+                    <br>Sniffers are used in a few places to capture and analyse packets from different nodes.
+                    <br>Relevant information can be extracted from the packet headers, noting changes mainly in the Ethernet and IP headers.
+                </p>
+                <img src="../images/Projects/topology.png" alt="" />
+                <br>
+                <a href="https://github.com/debachow-007/cisco_cybersecurity">
+                    <button>Take a Peek</button>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <footer class="flex" id="footer">
+            <div class="copy">Debargha Chowdhury</div>
+            <div class="social">
+              <a href="https://www.instagram.com/debachow_007/" title="Instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B916393758284&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/debachow/" title="LinkedIn" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/debachow-007" title="GitHub" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:debachow007@hotmail.com" title="Mail" target="_blank">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+        </footer>
+    </div>
+  </body>
