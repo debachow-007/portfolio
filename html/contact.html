@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Debargha Chowdhury</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
@@ -88,19 +88,31 @@
             const message = document.getElementById("message").value;
     
             // Send the email using Email.js
-            emailjs.send("service_ijuf0sd", "template_lcfh5aj", {
-                from_name: name+" with "+email,
-                message: message,
-            }).then(function (response) {
-                if (response.status === 200) {
-                    // Email sent successfully
-                    document.getElementById("confirmationMessage").textContent = "Thank you for the response! I'll get back to you ASAP";
-                } else {
-                    // Handle errors
-                }
-            }, function (error) {
-                console.error("Error:", error);
-            });
+            if (isValidEmail(email)) {
+              emailjs.send("service_ijuf0sd", "template_lcfh5aj", {
+                  from_name: name+" with "+email,
+                  message: message,
+              }).then(function (response) {
+                  if (response.status === 200) {
+                      // Email sent successfully
+                      document.getElementById("confirmationMessage").textContent = "Thank you for the response! I'll get back to you ASAP";
+                      document.getElementById("name").value = "";
+                      document.getElementById("email").value = "";
+                      document.getElementById("message").value = "";
+                  } else {
+                      // Handle errors
+                  }
+              }, function (error) {
+                  console.error("Error:", error);
+              });
+            } else {
+              document.getElementById("confirmationMessage").textContent = "Please enter a valid email address.";
+            }
         });
+    
+        function isValidEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
     </script>
   </body>
