@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="google-site-verification" content="yOMnbGATUBkz42ScB9kENODZriycISXbjCRGDXdpYmc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Debargha Chowdhury</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -106,6 +105,7 @@
       
       <footer class="flex" id="footer">
         <div class="copy">Debargha Chowdhury</div>
+        <p>Total visitors: <span id="totalVisitors">0</span></p>
         <div class="social">
           <a href="https://www.instagram.com/debachow_007/" title="Instagram" target="_blank">
             <i class="fa-brands fa-instagram"></i>
@@ -135,6 +135,28 @@
         backSpeed: 30,
         loop: true,
       });
+    </script>
+
+    <script>
+      // Check if the "totalVisitors" value is stored in local storage
+      let totalVisitors = localStorage.getItem("websiteTotalVisitors");
+
+      if (totalVisitors === null) {
+          // If not, initialize it to 0
+          totalVisitors = 0;
+      } else {
+          // If it exists, parse it to an integer
+          totalVisitors = parseInt(totalVisitors);
+      }
+
+      // Increment the total visitor count
+      totalVisitors++;
+
+      // Update the HTML element to display the count
+      document.getElementById("totalVisitors").textContent = totalVisitors;
+
+      // Store the updated count in local storage
+      localStorage.setItem("websiteTotalVisitors", totalVisitors.toString());
     </script>
   </body>
 </html>
